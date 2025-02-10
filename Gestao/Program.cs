@@ -22,10 +22,26 @@ builder.Services.AddScoped<IdentityUserAccessor>();
 builder.Services.AddScoped<IdentityRedirectManager>();
 builder.Services.AddScoped<AuthenticationStateProvider, PersistingRevalidatingAuthenticationStateProvider>();
 
-builder.Services.AddAuthentication(options =>
+builder.Services
+    .AddAuthentication(options =>
     {
         options.DefaultScheme = IdentityConstants.ApplicationScheme;
         options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
+    })
+    .AddGoogle(options =>
+    {
+        options.ClientId = builder.Configuration.GetValue<string>("OAuth:Google:ClientId")!;
+        options.ClientSecret = builder.Configuration.GetValue<string>("OAuth:Google:ClientSecret")!;
+    })
+    .AddFacebook(options =>
+    {
+        options.ClientId = builder.Configuration.GetValue<string>("OAuth:Facebook:ClientId")!;
+        options.ClientSecret = builder.Configuration.GetValue<string>("OAuth:Facebook:ClientSecret")!;
+    })
+    .AddMicrosoftAccount(options =>
+    {
+        options.ClientId = builder.Configuration.GetValue<string>("OAuth:Microsoft:ClientId")!;
+        options.ClientSecret = builder.Configuration.GetValue<string>("OAuth:Microsoft:ClientSecret")!;
     })
     .AddIdentityCookies();
 
