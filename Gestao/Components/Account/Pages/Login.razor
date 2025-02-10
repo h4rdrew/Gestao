@@ -44,7 +44,7 @@
 
             <div class="form-check">
                 <InputCheckbox @bind-Value="Input.RememberMe" id="auth-remember-check" class="darker-border-checkbox form-check-input" />
-                <label class="form-check-label" for="auth-remember-check">Lembrar a senhar</label>
+                <label class="form-check-label" for="auth-remember-check">Lembrar-me?</label>
             </div>
 
             <div class="mt-4">
@@ -121,7 +121,7 @@
         }
         else if (result.IsLockedOut)
         {
-            Logger.LogWarning("User account locked out.");
+            Logger.LogWarning("Conta de usuário bloqueada.");
             RedirectManager.RedirectTo("Account/Lockout");
         }
         else
@@ -140,7 +140,7 @@
         [DataType(DataType.Password)]
         public string Password { get; set; } = "";
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "Lembrar-me?")]
         public bool RememberMe { get; set; }
     }
 }
