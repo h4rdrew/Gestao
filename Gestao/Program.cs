@@ -1,12 +1,11 @@
-using Gestao.Client.Pages;
 using Gestao.Components;
 using Gestao.Components.Account;
 using Gestao.Data;
+using Gestao.Domain;
 using Gestao.Libaries.Mail;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using System.Net;
 using System.Net.Mail;
 

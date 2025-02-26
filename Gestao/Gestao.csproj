@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Gestao.Client\Gestao.Client.csproj" />
+    <ProjectReference Include="..\Gestao.Domain\Gestao.Domain.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="8.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="8.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="8.0.12" />

@@ -1,6 +1,7 @@
 ﻿using Gestao.Data;
 using Microsoft.AspNetCore.Identity;
 using System.Net.Mail;
+using Gestao.Domain;
 
 namespace Gestao.Libaries.Mail;
 public class EmailSender(ILogger<EmailSender> logger, SmtpClient smtpClient, IConfiguration configuration) : IEmailSender<ApplicationUser>

@@ -1,4 +1,4 @@
-using Gestao.Data;
+using Gestao.Domain;
 using Microsoft.AspNetCore.Identity;
 
 namespace Gestao.Components.Account
