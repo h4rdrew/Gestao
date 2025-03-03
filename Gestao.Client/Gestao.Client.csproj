@@ -18,10 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Update="Pages\AccountManagers\Pay\List.razor">
+    <Content Update="Pages\Financial\Pay\List.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
-    <Content Update="Pages\AccountManagers\Receive\List.razor">
+    <Content Update="Pages\Financial\Receive\List.razor">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
     </Content>
     <Content Update="Pages\Category\List.razor">
